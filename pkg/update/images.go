@@ -193,6 +193,9 @@ func exactImageRepos(reg registry.Registry, images []image.Ref) (ImageRepos, err
 func imageExists(reg registry.Registry, imageID image.Ref) (bool, error) {
 	_, err := reg.GetImage(imageID)
 	if err != nil {
+		if err == registry.ErrImageScanDisabled {
+			return true, nil
+		}
 		return false, nil
 	}
 	return true, nil
