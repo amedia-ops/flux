@@ -26,6 +26,8 @@ _testmain.go
 # Tool related configurations
 .ackrc
 .envrc
+*.iml
+.idea/
 
 ### Package builds (e.g. snap of fluxctl)
 fluxctl_*_*.snap
