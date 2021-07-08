@@ -2,7 +2,7 @@ FROM alpine:3.12
 
 WORKDIR /home/flux
 
-RUN apk add --no-cache openssh-client ca-certificates tini 'git>=2.24.2' 'gnutls>=3.6.7' 'glib>=2.62.5-r0' gnupg gawk socat python3 py3-pip
+RUN apk add --no-cache openssh-client ca-certificates tini 'git>=2.24.2' 'gnutls>=3.6.7' 'glib>=2.62.5-r0' gnupg gawk socat python3 py3-pip jq
 RUN apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing git-secret
 
 RUN pip3 install yq
